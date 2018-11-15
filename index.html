@@ -13,22 +13,20 @@
     </p>
   </div>
   <div>
-  <div class="color green" id="green"></div>
-  <div class="color red" id="red"></div>
-  <div class="color blue" id="blue"></div>
-</div>
-<script>
-//fonctionne avec hover....quelle différence?
-$('#green').mouseover(function(){
-  $('#text').css('color', 'green')
-})
-$('#red').mouseover(function(){
-  $('#text').css('color', 'red')
-})
-$('#blue').mouseover(function(){
-  $('#text').css('color', 'blue')
-})
-
+    <div class="color green" id="green"></div>
+    <div class="color red" id="red"></div>
+    <div class="color blue" id="blue"></div>
+  </div>
+  <script>
+  $(function(){
+    //fonctionne avec hover....quelle différence?
+    $('.color').mouseover(function(){
+      $('#text').css('color', this.id);
+    });
+    $('.color').mouseout(function(){
+      $('#text').css('color', 'black');
+    });
+  });
 </script>
 </body>
 </html>
